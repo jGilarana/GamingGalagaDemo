@@ -1,9 +1,9 @@
-function Player(x, y, board) {
+function Player(x, y) {
     var self = this
     this.x = x;
     this.y = y;
     this.direction = 0
-    this.speed = 50
+    this.speed = 25
     this.sprite
 
     this.insertPlayer = function () {
@@ -16,8 +16,12 @@ function Player(x, y, board) {
     }
 
     this.move = function () {
-        self.x = self.x + self.speed * self.direction
-        self.sprite.style.left = self.x + 'px'
+     nextX = self.x + self.speed * self.direction   
+        if (nextX >= 0 && nextX <= 450) {
+            self.x = self.x + self.speed * self.direction
+            self.sprite.style.left = self.x + 'px'
+        }
+        
     }
 }
 

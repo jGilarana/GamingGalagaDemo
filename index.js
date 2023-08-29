@@ -1,5 +1,9 @@
+
 var board = document.getElementById('main-board')
 var player = new Player(225, 750)
+
+
+
 
 function Player(x, y) {
     var self = this
@@ -19,7 +23,7 @@ function Player(x, y) {
     }
 
     this.move = function () {
-     nextX = self.x + self.speed * self.direction   
+    var nextX = self.x + self.speed * self.direction   
         if (nextX >= 0 && nextX <= 450) {
             self.x = self.x + self.speed * self.direction
             self.sprite.style.left = self.x + 'px'
@@ -28,9 +32,11 @@ function Player(x, y) {
     }
 }
 
+
+
 player.insertPlayer()
 
-var timerId = setInterval(player.move, 30)
+
 
 window.addEventListener('keydown', function (e) {
     switch (e.key) {
@@ -45,4 +51,17 @@ window.addEventListener('keyup', function() {
 
 player.direction = 0
 
-})
+}) 
+
+
+function start() {
+    var timerId = setInterval(player.move, 30)
+    var timerId2 = setInterval(createEnemy, 2000)
+}
+
+// function createEnemy () {
+//     var xRandom = Math.floor(Math.random() * 10) * 50
+//     var enemy = new Enemy(xRandom, 0, board)
+//     enemy.insertEnemy()
+// }
+start()
