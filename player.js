@@ -1,4 +1,4 @@
-function Player(x, y, parent) {
+function Player(x, y, board) {
     var self = this
     this.x = x;
     this.y = y;
@@ -12,7 +12,7 @@ function Player(x, y, parent) {
         newPlayer.style.left = this.x + 'px'
         newPlayer.style.top = this.y + 'px'
         this.sprite = newPlayer
-        parent.appendChild(this.sprite)
+        board.appendChild(this.sprite)
     }
 
     this.move = function () {
@@ -21,4 +21,4 @@ function Player(x, y, parent) {
     }
 }
 
-export {Player}
+export { Player }
