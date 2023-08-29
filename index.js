@@ -6,7 +6,7 @@ function Player(x, y) {
     this.x = x;
     this.y = y;
     this.direction = 0
-    this.speed = 50
+    this.speed = 20
     this.sprite
 
     this.insertPlayer = function () {
