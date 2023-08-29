@@ -1,0 +1,33 @@
+#main-board { 
+
+    width : 500px;
+    height:800px;
+    background-color: black;
+    margin: 50px auto;
+    position: relative;
+}
+
+#player {
+
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    position: absolute;
+    top: 750px;
+    left: 225px;
+}
+
+.enemies {
+
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    position: absolute; 
+}
+
+.bullets {
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    position: absolute;  
+}
